@@ -1,5 +1,4 @@
 <template>
-  
   <li>
     <div class="collapsible-header my-collapse">
       <div class="todo-info">
@@ -55,22 +54,25 @@
 <script>
 import M from "materialize-css";
 
-// collapsible init
-document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".collapsible");
-  M.Collapsible.init(elems);
+// // collapsible init
+// document.addEventListener("DOMContentLoaded", function() {
+//   var elems = document.querySelectorAll(".collapsible");
+//   M.Collapsible.init(elems);
 
-  var elem = document.querySelector(".collapsible.expandable");
-  M.Collapsible.init(elem, {
-    accordion: false,
-  });
-});
+//   var elem = document.querySelector(".collapsible.expandable");
+//   M.Collapsible.init(elem, {
+//     accordion: false,
+//   });
+// });
 
 export default {
   name: "TodoItem",
 
   props: {
     todo: Object,
+  },
+  mounted() {
+    M.AutoInit();
   },
 };
 </script>
