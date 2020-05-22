@@ -5,7 +5,7 @@
       <form class="my-form">
         <div class="input-field">
           <input
-            v-model="todoToAdd.title"
+            v-model="todo.title"
             id="my-title"
             type="text"
             class="validate"
@@ -15,7 +15,7 @@
 
         <div class="input-field">
           <textarea
-            v-model="todoToAdd.text"
+            v-model="todo.text"
             id="textarea1"
             class="materialize-textarea"
           ></textarea>
@@ -28,7 +28,7 @@
 
         <div class="input-field">
           <input
-            v-model="todoToAdd.priority"
+            v-model="todo.priority"
             id="priority"
             type="number"
             class="validate"
@@ -38,7 +38,7 @@
 
         <label class="is-finished">
           <input
-            v-model="todoToAdd.isCompleted"
+            v-model="todo.isCompleted"
             type="checkbox"
             class="filled-in"
           />
@@ -68,13 +68,13 @@
 export default {
   name: "ModalAdd",
   props: {
-    todoToAdd: Object,
+    todo: Object,
   },
   methods: {
     addTodo: function() {
       // const todo = {
       //   id: this.nextTodoId++,
-      //   ...this.todoToAdd,
+      //   ...this.todo,
       //   due: new Date(myGlobal.modal.date),
       // };
 

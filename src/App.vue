@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TodoList :todos="todos"></TodoList>
-    <ModalAdd :todoToAdd="todoToAdd"></ModalAdd>
+    <ModalAdd :todo="todoToAdd"></ModalAdd>
     <ModalEdit @saveedited="saveEdited" :todo="todoToEdit"></ModalEdit>
   </div>
 </template>
