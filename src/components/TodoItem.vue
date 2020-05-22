@@ -13,19 +13,18 @@
     <div class="info-bar">
       <div class="small-info-container">
         <div class="small-info">
-          우선순위: {{ todo.priority ? todo.priority : "없음" }}
+          Priority: {{ todo.priority ? todo.priority : "없음" }}
         </div>
         <div class="small-info">
-          마감일:
+          Deadline:
           {{
             todo.due
               ? todo.due.getFullYear() +
-                "년" +
+                "/" +
                 (todo.due.getMonth() + 1) +
-                "월" +
-                todo.due.getDate() +
-                "일"
-              : "없음"
+                "/" +
+                todo.due.getDate()
+              : "none"
           }}
         </div>
       </div>
@@ -92,7 +91,7 @@ export default {
   background: #1e88e5;
   color: white;
   border-radius: 3px;
-  padding: 0.2rem 0.5rem ;
+  padding: 0.2rem 0.5rem;
   font-size: 0.9rem;
 }
 
