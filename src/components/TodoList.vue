@@ -8,6 +8,10 @@
 <script>
 import TodoItem from "./TodoItem.vue";
 
+const todoitem = {
+  
+}
+
 export default {
   name: "TodoList",
   components: {
