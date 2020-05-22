@@ -3,45 +3,37 @@
     <div class="collapsible-header my-collapse">
       <div class="todo-info">
         <div class="header-container">
-          <h6 v-bind:class="todo.isCompleted ? 'completed' : 'not-completed'">
-            {{ todo.title }}
-          </h6>
+          <h6 :class="todo.isCompleted ? 'completed' : 'not-completed'">{{ todo.title }}</h6>
         </div>
       </div>
     </div>
 
     <div class="info-bar">
       <div class="small-info-container">
-        <div class="small-info">
-          priority: {{ todo.priority ? todo.priority : "none" }}
-        </div>
+        <div class="small-info">priority: {{ todo.priority ? todo.priority : "none" }}</div>
         <div class="small-info">
           deadline:
           {{
-            todo.due
-              ? todo.due.getFullYear() +
-                "/" +
-                (todo.due.getMonth() + 1) +
-                "/" +
-                todo.due.getDate()
-              : "none"
+          todo.due
+          ? todo.due.getFullYear() +
+          "/" +
+          (todo.due.getMonth() + 1) +
+          "/" +
+          todo.due.getDate()
+          : "none"
           }}
         </div>
       </div>
       <div class="edit">
         <a
-          v-on:click="editTodo(todo)"
+          @click="editTodo(todo)"
           href="#modal2"
           title="Edit"
           class="waves-effect waves-teal btn-flat modal-trigger"
         >
           <i class="material-icons edit-icon">edit</i>
         </a>
-        <a
-          title="Delete"
-          v-on:click="deleteTodo(todo.id)"
-          class="waves-effect waves-teal btn-flat"
-        >
+        <a title="Delete" @click="deleteTodo(todo.id)" class="waves-effect waves-teal btn-flat">
           <i class="material-icons">delete</i>
         </a>
       </div>
@@ -51,12 +43,11 @@
 </template>
 
 <script>
-
 export default {
   name: "TodoItem",
 
   props: {
-    todo: Object,
+    todo: Object
   },
   methods: {
     deleteTodo(id) {
@@ -64,8 +55,8 @@ export default {
     },
     editTodo(todo) {
       this.$emit("edit", todo);
-    },
-  },
+    }
+  }
 };
 </script>
 

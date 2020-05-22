@@ -29,7 +29,7 @@
 
         <div class="my-modal-buttons">
           <a
-            v-on:click="addTodo"
+            @click="addTodo"
             href="#!"
             class="modal-close waves-effect waves-light btn my-modal-button"
           >Add</a>
@@ -73,7 +73,6 @@ export default {
   align-items: center;
   flex-direction: column;
   padding: 0 !important;
-
 }
 
 .my-form {

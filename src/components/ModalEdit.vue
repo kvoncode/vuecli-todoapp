@@ -46,16 +46,11 @@
 
         <div class="my-modal-buttons">
           <a
-            v-on:click="saveEdited"
+            @click="saveEdited"
             href="#!"
             class="modal-close waves-effect waves-light btn my-modal-button"
-            >Save</a
-          >
-          <a
-            href="#!"
-            class="modal-close waves-effect waves-light btn red my-modal-button"
-            >Cancel</a
-          >
+          >Save</a>
+          <a href="#!" class="modal-close waves-effect waves-light btn red my-modal-button">Cancel</a>
         </div>
       </form>
     </div>
@@ -66,13 +61,13 @@
 export default {
   name: "ModalEdit",
   props: {
-    todo: Object,
+    todo: Object
   },
   methods: {
     saveEdited() {
       this.$emit("saveedited");
-    },
-  },
+    }
+  }
 };
 </script>
 
