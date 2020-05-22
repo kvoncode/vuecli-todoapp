@@ -4,21 +4,12 @@
       <h5>Add item</h5>
       <form class="my-form">
         <div class="input-field">
-          <input
-            v-model="todo.title"
-            id="my-title"
-            type="text"
-            class="validate"
-          />
+          <input v-model="todo.title" id="my-title" type="text" class="validate" />
           <label for="my-title">Title</label>
         </div>
 
         <div class="input-field">
-          <textarea
-            v-model="todo.text"
-            id="textarea1"
-            class="materialize-textarea"
-          ></textarea>
+          <textarea v-model="todo.text" id="textarea1" class="materialize-textarea"></textarea>
           <label for="textarea1">Text</label>
         </div>
         <div class="input-field">
@@ -27,21 +18,12 @@
         </div>
 
         <div class="input-field">
-          <input
-            v-model="todo.priority"
-            id="priority"
-            type="number"
-            class="validate"
-          />
+          <input v-model="todo.priority" id="priority" type="number" class="validate" />
           <label for="priority">Priority</label>
         </div>
 
         <label class="is-finished">
-          <input
-            v-model="todo.isCompleted"
-            type="checkbox"
-            class="filled-in"
-          />
+          <input v-model="todo.isCompleted" type="checkbox" class="filled-in" />
           <span>Completed</span>
         </label>
 
@@ -50,13 +32,8 @@
             v-on:click="addTodo"
             href="#!"
             class="modal-close waves-effect waves-light btn my-modal-button"
-            >Add</a
-          >
-          <a
-            href="#!"
-            class="modal-close waves-effect waves-light btn red my-modal-button"
-            >Cancel</a
-          >
+          >Add</a>
+          <a href="#!" class="modal-close waves-effect waves-light btn red my-modal-button">Cancel</a>
         </div>
       </form>
     </div>
@@ -64,11 +41,10 @@
 </template>
 
 <script>
-
 export default {
   name: "ModalAdd",
   props: {
-    todo: Object,
+    todo: Object
   },
   methods: {
     addTodo: function() {
@@ -77,11 +53,9 @@ export default {
       //   ...this.todo,
       //   due: new Date(myGlobal.modal.date),
       // };
-
       // this.todos.push(todo);
-
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -89,14 +63,16 @@ export default {
 .my-modal {
   height: 800px !important;
   max-height: 60% !important;
+  width: 100vw;
 }
 
 .my-modal-content {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 !important;
+
 }
 
 .my-form {
