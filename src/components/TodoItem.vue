@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import M from "materialize-css";
 
 // // collapsible init
 // document.addEventListener("DOMContentLoaded", function() {
@@ -71,9 +70,7 @@ export default {
   props: {
     todo: Object,
   },
-  mounted() {
-    M.AutoInit();
-  },
+
 };
 </script>
 

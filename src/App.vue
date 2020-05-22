@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <TodoList></TodoList>
   </div>
 </template>
 
 <script>
+import TodoList from "./components/TodoList.vue";
+import M from "materialize-css";
 
-import TodoList from "./components/TodoList.vue"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    TodoList
-  }
-}
+    TodoList,
+  },
+  mounted() {
+    M.AutoInit();
+  },
+};
 </script>
 
 <style>
