@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TodoList :todos="todos"></TodoList>
-    <ModalAdd :todo="todoToAdd"></ModalAdd>
+    <ModalAdd :todo="todoToAdd" @addtodo="addTodo"></ModalAdd>
     <ModalEdit @saveedited="saveEdited" :todo="todoToEdit"></ModalEdit>
   </div>
 </template>
@@ -31,6 +31,14 @@ export default {
     });
   },
   methods: {
+    addTodo: function() {
+      const todo = {
+        id: this.nextTodoId++,
+        ...this.todoToAdd,
+        due: new Date(),
+      };
+      this.todos.push(todo);
+    },
     saveEdited: function() {
       // console.log("save edite event triggered", myGlobal.modal2.date);
       // for (let index = 0; index < this.todos.length; index++) {

@@ -48,12 +48,8 @@ export default {
   },
   methods: {
     addTodo: function() {
-      // const todo = {
-      //   id: this.nextTodoId++,
-      //   ...this.todo,
-      //   due: new Date(myGlobal.modal.date),
-      // };
-      // this.todos.push(todo);
+      this.$emit("addtodo")
+      
     }
   }
 };
