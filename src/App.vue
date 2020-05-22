@@ -22,6 +22,13 @@ export default {
   },
   mounted() {
     M.AutoInit();
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var elem = document.querySelector(".collapsible.expandable");
+      M.Collapsible.init(elem, {
+        accordion: false
+      });
+    });
   },
   methods: {
     saveEdited: function() {
@@ -58,24 +65,24 @@ export default {
       todos: [
         {
           id: 1,
-          title: "title 1",
-          text: "text 1",
+          title: "Vue.js iteration 1",
+          text: "Hone todo app (Vue.js CLI, Materialize.css)",
           due: new Date(),
           isCompleted: true,
           priority: 100
         },
         {
           id: 2,
-          title: "title 2",
-          text: "text 2",
+          title: "Vue.js iteration 2",
+          text: "Nuxt.js app",
           due: new Date(),
           isCompleted: false,
           priority: 12
         },
         {
           id: 3,
-          title: "title 3",
-          text: "text 3",
+          title: "Vue.js iteration 3",
+          text: "production app",
           due: new Date(),
           isCompleted: true,
           priority: null
