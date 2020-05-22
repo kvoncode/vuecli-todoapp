@@ -5,7 +5,7 @@
       <form class="my-form">
         <div class="input-field">
           <input
-            placeholder="todo.title"
+            :placeholder="todo.title"
             v-model="todo.title"
             id="my-title"
             type="text"
@@ -16,7 +16,7 @@
 
         <div class="input-field">
           <textarea
-            placeholder="todo.text"
+            :placeholder="todo.text"
             v-model="todo.text"
             id="textarea1"
             class="materialize-textarea"
@@ -30,7 +30,7 @@
 
         <div class="input-field">
           <input
-            placeholder="todo.priority"
+            :placeholder="todo.priority"
             v-model="todo.priority"
             id="priority"
             type="number"
