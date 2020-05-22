@@ -3,7 +3,7 @@
     <div class="collapsible-header my-collapse">
       <div class="todo-info">
         <div class="header-container">
-          <h6 v-bind:class="todo.isCompleted ? 'completed' : ''">
+          <h6 v-bind:class="todo.isCompleted ? 'completed' : 'not-completed'">
             {{ todo.title }}
           </h6>
         </div>
@@ -87,6 +87,14 @@ export default {
 
 .completed {
   background: #1e88e5;
+  color: white;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.not-completed {
+  background: #741ee5;
   color: white;
   border-radius: 3px;
   padding: 0.2rem 0.5rem;
