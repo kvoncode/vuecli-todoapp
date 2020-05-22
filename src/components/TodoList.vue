@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     Todo List
-    <TodoItem></TodoItem>
+    <TodoItem :todo="todoitem"></TodoItem>
   </div>
 </template>
 
@@ -9,8 +9,13 @@
 import TodoItem from "./TodoItem.vue";
 
 const todoitem = {
-  
-}
+  id: 2,
+  title: "title 2",
+  text: "text 2",
+  due: new Date(),
+  isCompleted: false,
+  priority: 12,
+};
 
 export default {
   name: "TodoList",
@@ -19,6 +24,11 @@ export default {
   },
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      todoitem: todoitem,
+    };
   },
 };
 </script>
