@@ -5,8 +5,7 @@
     <a class="add-todo waves-effect waves-light btn modal-trigger" href="#modal1">Add item</a>
     <ul class="collapsible expandable todo-list">
       <TodoItem
-        @delete="deleteTodo"
-        @edit="editTodo"
+        
         v-for="todo in todos"
         :key="todo.id"
         :todo="todo"
@@ -27,18 +26,7 @@ export default {
     todos: Array
   },
   methods: {
-    deleteTodo: function(id) {
-      for (let index = 0; index < this.todos.length; index++) {
-        if (this.todos[index].id === id) {
-          this.todos.splice(index, 1);
-          break;
-        }
-      }
-    },
-
-    editTodo: function(todo) {
-      this.todoToEdit = todo;
-    }
+    
   },
   
 };
