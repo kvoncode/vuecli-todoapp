@@ -1,20 +1,43 @@
 <template>
   <div id="app">
-      <TodoList></TodoList>
+    <TodoList></TodoList>
+    <ModalAdd :todoToAdd="todoToAdd"></ModalAdd>
   </div>
 </template>
 
 <script>
 import TodoList from "./components/TodoList.vue";
+import ModalAdd from "./components/ModalAdd.vue";
+
 import M from "materialize-css";
 
 export default {
   name: "App",
   components: {
     TodoList,
+    ModalAdd,
   },
   mounted() {
     M.AutoInit();
+  },
+  data() {
+    return {
+      todoToAdd: {
+        title: "",
+        text: "",
+        isCompleted: false,
+        priority: null,
+      },
+      nextTodoId: 4,
+
+      todoToEdit: {
+        id: null,
+        title: "",
+        text: "",
+        isCompleted: false,
+        priority: null,
+      },
+    };
   },
 };
 </script>
@@ -37,6 +60,4 @@ export default {
   padding: 1rem;
   min-height: 500px;
 }
-
-
 </style>
