@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div class="container">
       <TodoList></TodoList>
-    </div>
   </div>
 </template>
 
@@ -40,11 +38,5 @@ export default {
   min-height: 500px;
 }
 
-.container {
-  margin-top: 5rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 400px;
-}
+
 </style>

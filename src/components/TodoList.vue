@@ -1,13 +1,22 @@
 <template>
-  <ul class="collapsible expandable todo-list">
-    <TodoItem
-      @delete="deleteTodo"
-      @edit="editTodo"
-      v-for="todo in todos"
-      :key="todo.id"
-      :todo="todo"
-    ></TodoItem>
-  </ul>
+  <div class="container">
+    <h4>Todo</h4>
+
+    <a
+      class="add-todo waves-effect waves-light btn modal-trigger"
+      href="#modal1"
+      >Add item</a
+    >
+    <ul class="collapsible expandable todo-list">
+      <TodoItem
+        @delete="deleteTodo"
+        @edit="editTodo"
+        v-for="todo in todos"
+        :key="todo.id"
+        :todo="todo"
+      ></TodoItem>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -70,6 +79,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+}
+
+.add-todo {
+  width: 100%;
+}
+
 .todo-list {
   margin-top: 1.5rem;
   width: 100%;
