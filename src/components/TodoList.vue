@@ -2,11 +2,7 @@
   <div class="container">
     <h4>Todo</h4>
 
-    <a
-      class="add-todo waves-effect waves-light btn modal-trigger"
-      href="#modal1"
-      >Add item</a
-    >
+    <a class="add-todo waves-effect waves-light btn modal-trigger" href="#modal1">Add item</a>
     <ul class="collapsible expandable todo-list">
       <TodoItem
         @delete="deleteTodo"
@@ -25,10 +21,10 @@ import TodoItem from "./TodoItem.vue";
 export default {
   name: "TodoList",
   components: {
-    TodoItem,
+    TodoItem
   },
   props: {
-    msg: String,
+    todos: Array
   },
   methods: {
     deleteTodo: function(id) {
@@ -42,38 +38,9 @@ export default {
 
     editTodo: function(todo) {
       this.todoToEdit = todo;
-    },
+    }
   },
-  data() {
-    return {
-      todos: [
-        {
-          id: 1,
-          title: "title 1",
-          text: "text 1",
-          due: new Date(),
-          isCompleted: true,
-          priority: 10,
-        },
-        {
-          id: 2,
-          title: "title 2",
-          text: "text 2",
-          due: new Date(),
-          isCompleted: false,
-          priority: 12,
-        },
-        {
-          id: 3,
-          title: "title 3",
-          text: "text 3",
-          due: new Date(),
-          isCompleted: true,
-          priority: null,
-        },
-      ],
-    };
-  },
+  
 };
 </script>
 

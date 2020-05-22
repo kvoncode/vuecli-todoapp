@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <TodoList></TodoList>
+    <TodoList :todos="todos"></TodoList>
     <ModalAdd :todoToAdd="todoToAdd"></ModalAdd>
-    <ModalEdit :todo="todoToEdit"></ModalEdit>
+    <ModalEdit @saveedited="saveEdited" :todo="todoToEdit"></ModalEdit>
   </div>
 </template>
 
@@ -12,7 +12,6 @@ import ModalAdd from "./components/ModalAdd.vue";
 import ModalEdit from "./components/ModalEdit.vue";
 
 import M from "materialize-css";
-
 
 export default {
   name: "App",
@@ -24,13 +23,28 @@ export default {
   mounted() {
     M.AutoInit();
   },
+  methods: {
+    saveEdited: function() {
+      // console.log("save edite event triggered", myGlobal.modal2.date);
+      // for (let index = 0; index < this.todos.length; index++) {
+      //   if (this.todos[index].id === this.todoToEdit.id) {
+      //     this.todoToEdit.due = new Date(myGlobal.modal2.date);
+      //     this.todos[index] = {
+      //       ...this.todoToEdit
+      //     };
+      //     // console.log(this.todos[index]);
+      //     break;
+      //   }
+      // }
+    }
+  },
   data() {
     return {
       todoToAdd: {
         title: "",
         text: "",
         isCompleted: false,
-        priority: null,
+        priority: null
       },
       nextTodoId: 4,
 
@@ -39,15 +53,40 @@ export default {
         title: "",
         text: "",
         isCompleted: false,
-        priority: null,
+        priority: null
       },
+      todos: [
+        {
+          id: 1,
+          title: "title 1",
+          text: "text 1",
+          due: new Date(),
+          isCompleted: true,
+          priority: 100
+        },
+        {
+          id: 2,
+          title: "title 2",
+          text: "text 2",
+          due: new Date(),
+          isCompleted: false,
+          priority: 12
+        },
+        {
+          id: 3,
+          title: "title 3",
+          text: "text 3",
+          due: new Date(),
+          isCompleted: true,
+          priority: null
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
-
 #app {
   display: flex;
   align-items: center;
