@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <TodoList></TodoList>
+    <div class="container">
+      <TodoList></TodoList>
+    </div>
   </div>
 </template>
 
 <script>
 import TodoList from "./components/TodoList.vue";
 import M from "materialize-css";
-
 
 export default {
   name: "App",
@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,5 +29,22 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 1rem;
+  min-height: 500px;
+}
+
+.container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
 }
 </style>

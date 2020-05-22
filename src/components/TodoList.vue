@@ -8,12 +8,10 @@
       :todo="todo"
     ></TodoItem>
   </ul>
-  
 </template>
 
 <script>
 import TodoItem from "./TodoItem.vue";
-
 
 export default {
   name: "TodoList",
@@ -22,6 +20,20 @@ export default {
   },
   props: {
     msg: String,
+  },
+  methods: {
+    deleteTodo: function(id) {
+      for (let index = 0; index < this.todos.length; index++) {
+        if (this.todos[index].id === id) {
+          this.todos.splice(index, 1);
+          break;
+        }
+      }
+    },
+
+    editTodo: function(todo) {
+      this.todoToEdit = todo;
+    },
   },
   data() {
     return {
@@ -57,4 +69,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.todo-list {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+</style>
