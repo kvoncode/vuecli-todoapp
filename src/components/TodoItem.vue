@@ -1,7 +1,6 @@
 <template>
   
   <li>
-      Hello item
     <div class="collapsible-header my-collapse">
       <div class="todo-info">
         <div class="header-container">
