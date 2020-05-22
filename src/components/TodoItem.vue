@@ -68,6 +68,14 @@ export default {
   props: {
     todo: Object,
   },
+  methods: {
+    deleteTodo(id) {
+      this.$emit("delete", id);
+    },
+    editTodo(todo) {
+      this.$emit("edit", todo);
+    },
+  },
 };
 </script>
 

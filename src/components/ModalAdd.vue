@@ -91,7 +91,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .my-modal {
   height: 800px !important;
   max-height: 60% !important;

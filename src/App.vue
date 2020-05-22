@@ -2,12 +2,14 @@
   <div id="app">
     <TodoList></TodoList>
     <ModalAdd :todoToAdd="todoToAdd"></ModalAdd>
+    <ModalEdit :todo="todoToEdit"></ModalEdit>
   </div>
 </template>
 
 <script>
 import TodoList from "./components/TodoList.vue";
 import ModalAdd from "./components/ModalAdd.vue";
+import ModalEdit from "./components/ModalEdit.vue";
 
 import M from "materialize-css";
 
@@ -17,6 +19,7 @@ export default {
   components: {
     TodoList,
     ModalAdd,
+    ModalEdit
   },
   mounted() {
     M.AutoInit();
