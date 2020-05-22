@@ -42,7 +42,7 @@
             type="checkbox"
             class="filled-in"
           />
-          <span>Is completed</span>
+          <span>Completed</span>
         </label>
 
         <div class="my-modal-buttons">
@@ -64,12 +64,6 @@
 </template>
 
 <script>
-// import M from "materialize-css";
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   var elems = document.querySelectorAll(".modal");
-//   M.Modal.init(elems);
-// });
 
 export default {
   name: "ModalAdd",

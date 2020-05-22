@@ -13,10 +13,10 @@
     <div class="info-bar">
       <div class="small-info-container">
         <div class="small-info">
-          Priority: {{ todo.priority ? todo.priority : "없음" }}
+          priority: {{ todo.priority ? todo.priority : "none" }}
         </div>
         <div class="small-info">
-          Deadline:
+          deadline:
           {{
             todo.due
               ? todo.due.getFullYear() +
@@ -32,13 +32,13 @@
         <a
           v-on:click="editTodo(todo)"
           href="#modal2"
-          title="편집"
+          title="Edit"
           class="waves-effect waves-teal btn-flat modal-trigger"
         >
           <i class="material-icons edit-icon">edit</i>
         </a>
         <a
-          title="삭제"
+          title="Delete"
           v-on:click="deleteTodo(todo.id)"
           class="waves-effect waves-teal btn-flat"
         >
@@ -51,16 +51,6 @@
 </template>
 
 <script>
-// // collapsible init
-// document.addEventListener("DOMContentLoaded", function() {
-//   var elems = document.querySelectorAll(".collapsible");
-//   M.Collapsible.init(elems);
-
-//   var elem = document.querySelector(".collapsible.expandable");
-//   M.Collapsible.init(elem, {
-//     accordion: false,
-//   });
-// });
 
 export default {
   name: "TodoItem",
