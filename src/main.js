@@ -7,6 +7,15 @@ import "normalize.css";
 
 Vue.use(Vuex);
 
+const store = new Vuex.Store({
+  state: {
+    
+  },
+  mutations: {
+    
+  }
+})
+
 Vue.config.productionTip = false;
 
 new Vue({
