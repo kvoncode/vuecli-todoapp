@@ -32,8 +32,7 @@ export default {
   },
   methods: {
     deleteTodo: function(id) {
-
-      console.log("delete todo event handled:", id)
+      console.log("delete todo event handled:", id);
 
       // for (let index = 0; index < this.todos.length; index++) {
       //   if (this.todos[index].id === id) {
@@ -85,34 +84,13 @@ export default {
         text: "",
         isCompleted: false,
         priority: null
-      },
-      todos: [
-        {
-          id: 1,
-          title: "Vue.js iteration 1",
-          text: "Hone todo app (Vue.js CLI, Materialize.css)",
-          due: new Date(),
-          isCompleted: true,
-          priority: 100
-        },
-        {
-          id: 2,
-          title: "Vue.js iteration 2",
-          text: "Nuxt.js app",
-          due: new Date(),
-          isCompleted: false,
-          priority: 12
-        },
-        {
-          id: 3,
-          title: "Vue.js iteration 3",
-          text: "production app",
-          due: new Date(),
-          isCompleted: true,
-          priority: null
-        }
-      ]
+      }
     };
+  },
+  computed: {
+    todos() {
+      return this.$store.state.todos;
+    }
   }
 };
 </script>
