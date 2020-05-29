@@ -22,8 +22,10 @@ export default {
   components: {
     TodoItem
   },
-  props: {
-    todos: Array
+  computed: {
+    todos() {
+      return this.$store.state.todos;
+    }
   },
   methods: {
     

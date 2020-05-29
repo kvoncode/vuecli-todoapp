@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TodoList :todos="todos" @delete="deleteTodo" @edit="editTodo"></TodoList>
+    <TodoList ></TodoList>
     <ModalAdd :todo="todoToAdd" @addtodo="addTodo"></ModalAdd>
     <ModalEdit :todo="todoToEdit" @saveedited="saveEdited"></ModalEdit>
   </div>
@@ -87,11 +87,7 @@ export default {
       }
     };
   },
-  computed: {
-    todos() {
-      return this.$store.state.todos;
-    }
-  }
+  
 };
 </script>
 

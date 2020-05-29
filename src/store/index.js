@@ -11,8 +11,8 @@ const store = new Vuex.Store({
     todos: [
       {
         id: 1,
-        title: "Passed from Vuex store",
-        text: "Hone todo app (Vue.js CLI, Materialize.css)",
+        title: "TodoList component",
+        text: "",
         due: new Date(),
         isCompleted: true,
         priority: 100,
