@@ -36,7 +36,7 @@
             type="number"
             class="validate"
           />
-          <label for="priority">Priority</label>
+          <label for="priority" :class="todo.priority ? 'active' : '' ">Priority</label>
         </div>
 
         <label class="is-finished">
