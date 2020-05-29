@@ -60,16 +60,10 @@
 <script>
 export default {
   name: "ModalEdit",
-  data() {
-    return {
-      todo: {
-        id: null,
-        title: "",
-        text: "",
-        isCompleted: false,
-        priority: null
-      }
-    };
+  computed: {
+    todo() {
+      return this.$store.state.todoToEdit;
+    }
   },
   methods: {
     saveEdited() {

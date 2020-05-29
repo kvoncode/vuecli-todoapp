@@ -14,7 +14,14 @@ const store = new Vuex.Store({
       isCompleted: false,
       priority: null,
     },
-    
+
+    todoToEdit: {
+      id: null,
+      title: "",
+      text: "",
+      isCompleted: false,
+      priority: null,
+    },
 
     todos: [
       {
