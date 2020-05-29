@@ -7,7 +7,9 @@ export const actions = {
     commit("deleteTodo", todo);
   },
 
-  editTodo({ commit }) {
-    commit("editTodo");
+
+
+  editTodo({ commit }, todo) {
+    commit("editTodo", todo);
   },
 };

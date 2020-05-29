@@ -26,7 +26,7 @@
       </div>
       <div class="edit">
         <a
-          @click="editTodo(todo)"
+          @click="changeTodoToEdit(todo)"
           href="#modal2"
           title="Edit"
           class="waves-effect waves-teal btn-flat modal-trigger"
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "TodoItem",
 
@@ -51,11 +52,10 @@ export default {
   },
   methods: {
     deleteTodo(todo) {
-      this.$store.dispatch('deleteTodo', todo)
+      this.$store.dispatch("deleteTodo", todo);
     },
-    editTodo(todo) {
-      this.$emit("edit", todo);
-    }
+    
+    ...mapActions(['changeTodoToEdit'])
   }
 };
 </script>

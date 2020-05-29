@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <TodoList ></TodoList>
-    <ModalAdd :todo="todoToAdd" @addtodo="addTodo"></ModalAdd>
-    <ModalEdit :todo="todoToEdit" @saveedited="saveEdited"></ModalEdit>
+    <TodoList></TodoList>
+    <ModalAdd></ModalAdd>
+    <ModalEdit></ModalEdit>
   </div>
 </template>
 
@@ -70,24 +70,9 @@ export default {
   },
   data() {
     return {
-      todoToAdd: {
-        title: "",
-        text: "",
-        isCompleted: false,
-        priority: null
-      },
-      nextTodoId: 4,
-
-      todoToEdit: {
-        id: null,
-        title: "",
-        text: "",
-        isCompleted: false,
-        priority: null
-      }
+      nextTodoId: 4
     };
-  },
-  
+  }
 };
 </script>
 

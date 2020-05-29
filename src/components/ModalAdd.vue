@@ -43,13 +43,14 @@
 <script>
 export default {
   name: "ModalAdd",
-  props: {
-    todo: Object
+  computed: {
+    todo() {
+      return this.$store.state.todoToAdd;
+    }
   },
   methods: {
     addTodo: function() {
-      this.$emit("addtodo")
-      
+      this.$emit("addtodo");
     }
   }
 };

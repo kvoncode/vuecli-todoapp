@@ -60,8 +60,16 @@
 <script>
 export default {
   name: "ModalEdit",
-  props: {
-    todo: Object
+  data() {
+    return {
+      todo: {
+        id: null,
+        title: "",
+        text: "",
+        isCompleted: false,
+        priority: null
+      }
+    };
   },
   methods: {
     saveEdited() {

@@ -8,6 +8,14 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
+    todoToAdd: {
+      title: "",
+      text: "",
+      isCompleted: false,
+      priority: null,
+    },
+    
+
     todos: [
       {
         id: 1,
