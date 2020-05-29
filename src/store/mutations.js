@@ -3,7 +3,7 @@ export const mutations = {
     state.todos.push(todo);
   },
 
-  removeTodo(state, todo) {
+  deleteTodo(state, todo) {
     state.todos.splice(state.todos.indexOf(todo), 1);
   },
 

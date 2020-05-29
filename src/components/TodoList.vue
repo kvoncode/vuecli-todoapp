@@ -3,7 +3,7 @@
     <h4>Todo</h4>
 
     <a class="add-todo waves-effect waves-light btn modal-trigger" href="#modal1">Add item</a>
-    <ul class="collapsible expandable todo-list">
+    <ul v-if="todos.length" class="collapsible expandable todo-list">
       <TodoItem
         
         v-for="todo in todos"
@@ -26,11 +26,8 @@ export default {
     todos() {
       return this.$store.state.todos;
     }
-  },
-  methods: {
-    
-  },
-  
+  }
+
 };
 </script>
 

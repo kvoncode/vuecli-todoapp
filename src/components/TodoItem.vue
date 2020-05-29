@@ -33,7 +33,7 @@
         >
           <i class="material-icons edit-icon">edit</i>
         </a>
-        <a title="Delete" @click="deleteTodo(todo.id)" class="waves-effect waves-teal btn-flat">
+        <a title="Delete" @click="deleteTodo(todo)" class="waves-effect waves-teal btn-flat">
           <i class="material-icons">delete</i>
         </a>
       </div>
@@ -50,8 +50,8 @@ export default {
     todo: Object
   },
   methods: {
-    deleteTodo(id) {
-      this.$emit("delete", id);
+    deleteTodo(todo) {
+      this.$store.dispatch('deleteTodo', todo)
     },
     editTodo(todo) {
       this.$emit("edit", todo);

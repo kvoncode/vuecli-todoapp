@@ -3,8 +3,8 @@ export const actions = {
     commit("addTodo", { text, done: false });
   },
 
-  removeTodo({ commit }, todo) {
-    commit("removeTodo", todo);
+  deleteTodo({ commit }, todo) {
+    commit("deleteTodo", todo);
   },
 
   editTodo({ commit }) {
