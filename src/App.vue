@@ -46,14 +46,14 @@ export default {
       this.todoToEdit = todo;
     },
 
-    addTodo: function() {
-      const todo = {
-        id: this.nextTodoId++,
-        ...this.todoToAdd,
-        due: new Date()
-      };
-      this.todos.push(todo);
-    },
+    // addTodo: function() {
+    //   const todo = {
+    //     id: this.nextTodoId++,
+    //     ...this.todoToAdd,
+    //     due: new Date()
+    //   };
+    //   this.todos.push(todo);
+    // },
     saveEdited: function() {
       // console.log("save edite event triggered", myGlobal.modal2.date);
       for (let index = 0; index < this.todos.length; index++) {
