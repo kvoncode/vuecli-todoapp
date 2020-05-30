@@ -81,7 +81,8 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 99vw;
+  margin: auto;
   min-height: 500px;
 }
 </style>
