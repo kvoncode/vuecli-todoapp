@@ -16,7 +16,6 @@ export const mutations = {
 
   saveEdited(state) {
     const index = state.todos.indexOf(state.todoToSave);
-    console.log("index i need", index);
     state.todos.splice(index, 1, state.todoToEdit)
   },
 };
