@@ -23,6 +23,9 @@ const store = new Vuex.Store({
       priority: null,
     },
 
+    todoToSave: {
+    },
+
     todos: [
       {
         id: 1,

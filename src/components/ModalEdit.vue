@@ -58,6 +58,8 @@
 </template>
 
 <script>
+
+import {mapActions} from "vuex"
 export default {
   name: "ModalEdit",
   computed: {
@@ -66,9 +68,7 @@ export default {
     }
   },
   methods: {
-    saveEdited() {
-      this.$emit("saveedited");
-    }
+   ...mapActions(['saveEdited'])
   }
 };
 </script>

@@ -26,7 +26,7 @@
       </div>
       <div class="edit">
         <a
-          @click="changeTodoToEdit(todo)"
+          @click="changeTodoToEdit(todo); changeTodoToSave(todo);"
           href="#modal2"
           title="Edit"
           class="waves-effect waves-teal btn-flat modal-trigger"
@@ -55,7 +55,7 @@ export default {
       this.$store.dispatch("deleteTodo", todo);
     },
     
-    ...mapActions(['changeTodoToEdit'])
+    ...mapActions(['changeTodoToEdit', 'changeTodoToSave'])
   }
 };
 </script>

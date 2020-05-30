@@ -7,11 +7,15 @@ export const actions = {
     commit("deleteTodo", todo);
   },
 
-  changeTodoToEdit({commit}, todo) {
+  changeTodoToEdit({ commit }, todo) {
     commit("changeTodoToEdit", todo);
   },
 
-  editTodo({ commit }, todo) {
-    commit("editTodo", todo);
+  changeTodoToSave({ commit }, todo) {
+    commit("changeTodoToSave", todo);
+  },
+
+  saveEdited({ commit }) {
+    commit("saveEdited");
   },
 };
