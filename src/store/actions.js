@@ -1,6 +1,6 @@
 export const actions = {
-  addTodo({ commit }, text) {
-    commit("addTodo", { text, done: false });
+  addTodo({ commit }) {
+    commit("addTodo");
   },
 
   deleteTodo({ commit }, todo) {

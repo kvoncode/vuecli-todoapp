@@ -15,6 +15,8 @@ const store = new Vuex.Store({
       priority: null,
     },
 
+    nextTodoId: 4,
+    
     todoToEdit: {
       id: null,
       title: "",
@@ -23,8 +25,7 @@ const store = new Vuex.Store({
       priority: null,
     },
 
-    todoToSave: {
-    },
+    todoToSave: {},
 
     todos: [
       {

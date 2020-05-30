@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "ModalAdd",
   computed: {
@@ -49,9 +50,7 @@ export default {
     }
   },
   methods: {
-    addTodo: function() {
-      this.$emit("addtodo");
-    }
+    ...mapActions(['addTodo'])
   }
 };
 </script>
