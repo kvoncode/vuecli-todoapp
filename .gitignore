@@ -2,6 +2,7 @@
 node_modules
 /dist
 temp.html
+temp.js
 # local env files
 .env.local
 .env.*.local
